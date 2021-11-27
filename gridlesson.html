@@ -5,42 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid Practical Exercise</title>
-    <style>
-        .container{
-            padding: 30px;
-            display: grid;
-            grid-template-columns: repeat(3, 2fr 1fr);
-
-            grid-gap: 2px;
-        }
-        .grid-one{
-            background-color: red;
-        }
-        .grid-two{
-            background-color: rgb(201, 115, 115);
-        }
-        .grid-three{
-            background-color: rgb(27, 126, 156);
-        }
-        .grid-four{
-            background-color: rgb(166, 216, 29);
-        }
-        .grid-five{
-            background-color: rgb(67, 34, 119);
-        }
-        .grid-six{
-            background-color: rgb(211, 40, 134);
-        }
-    </style>
+    <link rel="stylesheet" href="maingrid.css">
 </head>
 <body>
-    <div class="container">
-        <div class="grid-one">Grid One</div>
-        <div class="grid-two">Grid Two</div>
-        <div class="grid-three">Grid Three</div>
-        <div class="grid-four">Grid Four</div>
-        <div class="grid-five">Grid Five</div>
-        <div class="grid-six">Grid Six</div>
+    <div class="grid-container">
+        <div class="grid-navbar">
+            <nav>
+                <ul>
+                    <li><a href="" class="active">My Experience</a></li>
+                    <li><a href="">Forum</a></li>
+                    <li class="sign-style"><a href="" class="sign-btn-style">Sign In</a></li>
+                </ul>        
+            </nav>
+        </div>
+        <div class="grid-left">
+            grid-left
+        </div>
+        <div class="grid-right">
+            grid-rght
+                <!--<img src="Image-banner.jpg" class="prof-style" alt="My Profile Pic - John N">-->
+        </div>
+        <div class="grid1-left">
+            grid1-left
+        </div>
+        <div class="grid2-right">
+            grid2-right
+                <!--<img src="Image-banner.jpg" class="prof-style" alt="My Profile Pic - John N">-->
+        </div>
+        <div class="footer">
+            footer
+        </div>
     </div>
 </body>
 </html>
