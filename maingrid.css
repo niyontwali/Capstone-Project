@@ -1,4 +1,6 @@
 body{
+    font-family: sans-serif;
+    overflow-x: hidden;
     margin: 0px;
     padding: 0px;
     background: linear-gradient(#3abfe875,rgb(230, 224, 224));
@@ -114,9 +116,7 @@ li a:hover:not(.active){
     top: 50%;
     transform: translate(-50%, -50%);
 }
-.footer-content{
-    margin: 0px 220px;
-}
+
 .btn-1{
     cursor: pointer;
     width: 200px;
@@ -164,8 +164,18 @@ li a:hover:not(.active){
 .sub-style{
     font-size: 13px;
 }
-.footer .footer-content .social {
-    display: flex;
-    font-size: 6px;
+.footer-content{
+    margin: 0px 220px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+.footer .footer-content .social a {    
+        font-size: 20px;
+        margin: 10px;
+        color: rgb(8, 8, 8);
+        overflow: none;
+
     
 }
