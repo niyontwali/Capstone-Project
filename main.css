@@ -1,0 +1,76 @@
+html, body{
+    background-color: #3abfe875;
+    margin: 0px;
+    padding: 0px;
+}
+nav{
+    background: chocolate;
+}
+nav ul {
+    
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    align-items: center;
+    list-style-type: none;
+    margin: 0px 100px;  
+}
+
+nav ul li a{
+    text-decoration: none;
+    padding: 0px 30px;
+}
+nav ul li.sign-position{
+    margin-left: auto;
+}
+nav ul li.sign-position2{
+    margin-right: 50px;
+}
+li a{
+    text-decoration: none;
+    color: White;
+    font-weight: bold;
+    font-size: 20px;
+}
+li .sign-btn-style{
+    background-color: #FC4364;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+li a.active{
+    background-color: #3abfe875;
+    padding: 5px;
+    border-radius: 5px;
+}
+li a:hover:not(.active){
+    color: black;
+    font-size: 22px;
+}
+.box-container{
+    background: red;
+    display: flex;
+    height: 700px;
+    margin: 0px 140px;
+    justify-content: center;
+}
+.box-intro{
+    flex: 1;
+    align-self: center;
+    background: blue;
+    justify-self: center;
+}
+.box-profpic{
+    flex: 2;
+    background-color: purple;
+    align-self: center;
+    align-content: center;
+    
+}
+
+img{
+    width: 200px;
+    height: 150px;
+    border-radius: 20px;
+    justify content
+}
