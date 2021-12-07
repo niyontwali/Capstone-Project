@@ -18,7 +18,6 @@ body{
     background-color: #7cd1c4;
     grid-column: span 8;
     width: 100%;
-    height: 20px;  
 }
 .grid-navbar {
     grid-column: span 8;
@@ -164,4 +163,9 @@ li a:hover:not(.active){
 }
 .sub-style{
     font-size: 13px;
+}
+.footer .footer-content .social {
+    display: flex;
+    font-size: 6px;
+    
 }
