@@ -22,7 +22,8 @@
         </div>
         <div class="form-container">
             <div class="container">
-                <form action="#">
+                <div id="error" style="color: red; padding: 10px 0px;"></div>
+                <form id="form" action="#">
                     <div class="title">Sign Up</div>
                        <div class="user-details">
                            <div class="input-box">
@@ -39,15 +40,15 @@
                             </div>
                             <div class="input-box">
                                 <span class="details">Tel Number</span> 
-                                <input type="text" placeholder="Enter your mobile number" required>
+                                <input id="number" type="text" placeholder="Enter your mobile number">
                             </div>
                             <div class="input-box">
                                 <span class="details">Password</span>
-                                <input type="password" placeholder="Enter a Password" required>
+                                <input id="password" type="password" placeholder="Enter a Password">
                             </div>
                             <div class="input-box">
                                 <span class="details">Confirm Password</span>
-                                <input type="password" placeholder="Re-type your password" required>
+                                <input id="password" type="password" placeholder="Re-type your password">
                             </div>
                        </div>
                        <div class="button">
@@ -74,5 +75,6 @@
             </div>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>
