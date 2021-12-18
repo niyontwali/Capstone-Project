@@ -124,11 +124,25 @@ form .input-box span.details{
   margin-right: 10px;
   border: 1px solid #ccc;
   border-bottom-width: 2px;
-  transition: all 0.3s ease;
+  
 }
 .user-details .input-box input:focus,
 .user-details .input-box input:valid{
-  border-color: #2bc2ec;
+  border-color: ;
+}
+.user-details small{
+  color: red;
+  position: absolute;
+  padding-bottom: 10px;
+  visibility: hidden;
+}
+.user-details .input-box.success input{
+  border: 2px solid #2bc2ec;
+  border-bottom-width: 3px;
+}
+.user-details .input-box.error input{
+  border: 2px solid rgb(187, 53, 104);
+  border-bottom-width: 3px;
 }
  form .button{
    height: 45px;
@@ -153,7 +167,7 @@ form .input-box span.details{
  @media(max-width: 584px){
  .container{
   max-width: 100%;
-}
+} 
 form .user-details .input-box{
     margin-bottom: 15px;
     width: 100%;

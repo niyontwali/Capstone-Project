@@ -167,6 +167,12 @@ p, h1 {
     padding-bottom: 0px;
     padding-top: 0px;
 }
+.input-box small{
+  color: red;
+  position: absolute;
+  padding-bottom: 10px;
+  visibility: hidden;
+}
 .footer-content{
     margin: 0px 220px;
    
