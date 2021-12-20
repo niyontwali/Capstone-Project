@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shizuru&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -107,7 +107,7 @@ li a:hover:not(.active){
     li a.active{
         color: rgb(206, 114, 114);
         font-weight: bold;
-        font-size: 26px;
+        font-size: 20px;
         border-radius: 5px;
     }
     li a:hover:not(.active){
@@ -133,120 +133,8 @@ li a:hover:not(.active){
 /* End of the navbar style */
 
 /* Start of content */
-.form-container{
-    margin: 60px;
-    padding: 0;
-    font-family: 'Poppins',sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    /* background: linear-gradient(#3abfe875,rgb(230, 224, 224)); */
-}
-.container{
-    max-width: 700px;
-    width: 100%;
-    background-color: #fff;
-    padding: 25px 30px;
-    border-radius: 5px;
-}
-.container .title{
-  font-size: 25px;
-  font-weight: 600;
-  position: relative;
-  margin-left: 5px;
-}
-.container form .user-details{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 20px 0 12px 0;
-}
-form .user-details .input-box{
-  margin-bottom: 15px;
-  width: 45%;
-  margin-right: 15px;
-}
-form .input-box span.details{
-  display: block;
-  font-weight: 500;
-  margin-bottom: 5px;
-}
-.user-details .input-box input{
-  height: 45px;
-  width: 100%;
-  outline: none;
-  font-size: 16px;
-  border-radius: 5px;
-  padding-left: 15px;
-  margin-right: 10px;
-  border: 1px solid #ccc;
-  border-bottom-width: 2px;
-  
-}
-.user-details .input-box input:focus,
-.user-details .input-box input:valid{
-  border-color:;
-}
-.user-details small{
-  color: red;
-  position: absolute;
-  padding-bottom: 10px;
-  visibility: hidden;
-}
-.user-details .input-box.success input{
-  border: 2px solid #2bc2ec;
-  border-bottom-width: 3px;
-}
-.user-details .input-box.error input{
-  border: 2px solid rgb(187, 53, 104);
-  border-bottom-width: 3px;
-}
- form .button{
-   height: 45px;
-   margin: 35px 0
- }
- form .button input{
-   height: 100%;
-   width: 100%;
-   border-radius: 5px;
-   border: none;
-   color: #fff;
-   font-size: 18px;
-   font-weight: 500;
-   letter-spacing: 1px;
-   cursor: pointer;
-   transition: all 0.3s ease;
-   background: linear-gradient(135deg, #71b7e6, #86ddc0);
- }
- 
- form .button input:hover{
-  background: linear-gradient(-135deg, #71b7e6, #86ddc0);
-  }
- @media(max-width: 584px){
- .container{
-  max-width: 100%;
-} 
-form .user-details .input-box{
-    margin-bottom: 15px;
-    width: 100%;
-    
-  }
-  form .category{
-    width: 100%;
-  }
-  .content form .user-details{
-    max-height: 300px;
-    overflow-y: scroll;
-  }
-  .user-details::-webkit-scrollbar{
-    width: 5px;
-  }
-  }
-  @media(max-width: 459px){
-  .container .content .category{
-    flex-direction: column;
-  }
+#container{
+    height: 100vh;
 }
 /* End of content */
 

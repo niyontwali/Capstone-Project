@@ -4,45 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="about.css">
-    <!-- <link rel="stylesheet" href="about.css"> -->
+    <title>Home</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <body>
-    <div class="grid-container">
-        <div class="grid-navbar">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="">My Blog</a></li>
-                    <li class="sign-style"><a href="#" class="sign-btn-style" id="logOut">Log out</a></li>
-                </ul>        
-            </nav>
-        </div>
-        <div class="grid-main">
-            <h1>Welcome to your Dashboard</h1>            
-        </div>
-        
-        <div class="footer">
-            <div style="width: 1100px;" class="footer-content">
-                <div style="float: left; width: 200px;">
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label onclick="document.location='index.html'" class="logo">johnN</label>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">My Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li class="sign-style"><a href="login.html" class="sign-btn-style" id="logOut">Log out</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+        <h1 class="welcome">Welcome to your Dashboard</h1>            
+    </div>
+    <footer class="footer">
+            <div class="row">
+                <div class="footer-col1">
                     <p>&copy; John Niyontwali</p>
-                </div> 
-                <div style="float: right; width: 300px;" class="social">
-                    <a target="_blank" href="#"><i class="fa fa-facebook"></i> </a>
-                    <a target="_blank" href="https://twitter.com/JohnNiyontwali"><i class="fa fa-twitter"></i> </a>
-                    <a target="_blank" href="#"><i class="fa fa-snapchat-ghost"></i> </a>
-                    <a target="_blank" href="https://www.instagram.com/n.john01/"><i class="fa fa-instagram"></i> </a>
-                    <a target="_blank" href="#"><i class="fa fa-google-plus"></i> </a>
                 </div>
-                <div style="float: right; width: 200px;">
-                    <p>Follow me on:</p>
+                <div class="footer-col2">
+                    <p>Contact us on: <br> +250781161254</p>
+                </div>
+                <div class="footer-col3">
+                    <h4>follow me on:</h4>
+                </div>
+                <div class="footer-col4">
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+   </footer>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
