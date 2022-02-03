@@ -1,0 +1,36 @@
+{
+  "name": "capstone-project",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./src/bin/www",
+    "dev": "nodemon --exec node ./src/bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^3.1.6",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "^0.31.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.10",
+    "morgan": "~1.9.1"
+  },
+  "description": "I am a software developer student at Andela Technical Leadership Program;\r This is my Capstone Project repository\r Thanks...",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niyontwali/Capstone-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niyontwali/Capstone-Project/issues"
+  },
+  "homepage": "https://github.com/niyontwali/Capstone-Project#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

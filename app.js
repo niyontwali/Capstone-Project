@@ -1,66 +1,58 @@
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyCMOFHglBKwwnR2l8SOnQf5EYfjw_9aGCY",
-  authDomain: "capstone-project-169de.firebaseapp.com",
-  databaseURL: "https://capstone-project-169de-default-rtdb.firebaseio.com",
-  projectId: "capstone-project-169de",
-  storageBucket: "capstone-project-169de.appspot.com",
-  messagingSenderId: "647920340850",
-  appId: "1:647920340850:web:63fb3590608071fd9997eb",
-  measurementId: "G-CM9ZWHD3Y1"
-};
-  //Initializing Firebase
-  firebase.initializeApp(firebaseConfig)
-  //initializing variables
-  const auth = firebase.auth()
-  const database = firebase.database()
+//Required built-in Modules
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 
-  //Sign Up Function
+//Required custom modules
+const indexRouter = require('./src/routes/index');
+const signupRouter = require('./src/routes/signup');
+const loginRouter = require('./src/routes/login');
+const blogRouter = require('./src/routes/blog')
 
-  let signUpBut = document.getElementById('but')
-  signUpBut.addEventListener('click', (e) =>{
-      //Preventing defauld behavior
-      e.preventDefault()
+//Initialization express app
+const app = express();
 
-        var fullName = document.getElementById('full-name').value;
-        var userName = document.getElementById('username').value;
-        var email = document.getElementById('email').value;
-        var telNumber = document.getElementById('number').value;
-        var password = document.getElementById('password').value;
-        var confirmPassword = document.getElementById('conf-password').value;
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
-        auth.createUserWithEmailAndPassword(email, password)
-        // .then((userCredentials) => {
-        //     // console.log(userCredentials)
-        //     var user = userCredentials.user
-        //     console.log(user.email)
-        // }) 
-        // .catch((error) => { 
-        //     var errorMessage = error.code
-        //     alert(errorMessage)
-        // })
-        .then(function(){
-         var user = auth.currentUser
-        //add this uder to Firebase Database
-         var database_ref = database.ref()
-         //create user data
-         var user_data = {
-         fullName: fullName,
-         userName: userName,
-         email: email,
-         telNumber: telNumber,
-                     
-            };
-              
-        database_ref.child('userInfo/' + user.uid).set(user_data)
-              
-        alert('User Created')
-          })
-         .catch(function(error){
-          //Firebase will use this to alert of its errors
-          var error_code = error.error_code
-         var error_message = error.message
-         alert(error_message)
-        })
-  })
+// Morgan treatment
+if (app.get('env') === 'development'){
+  app.use(logger('dev'));
+  console.log('Morgan logger is enabled...')
+}
 
+//Built-in Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
+//Custom Middleware
+app.use('/api', indexRouter);
+app.use('/api/signup', signupRouter);
+app.use('/api/login', loginRouter);
+app.use('/api/blog', blogRouter);
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
+});
+
+// error handler
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+  // render the error page
+  res.status(err.status || 500);
+  res.status(404).json(
+    {
+      
+    }
+  );
+});
+module.exports = app;
