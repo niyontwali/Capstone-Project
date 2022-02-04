@@ -9,7 +9,9 @@ const logger = require('morgan');
 const indexRouter = require('./src/routes/index');
 const signupRouter = require('./src/routes/signup');
 const loginRouter = require('./src/routes/login');
-const blogRouter = require('./src/routes/blog')
+const blogRouter = require('./src/routes/blog');
+const aboutRouter = require('./src/routes/about')
+const { dirname } = require('path');
 
 //Initialization express app
 const app = express();
@@ -28,13 +30,19 @@ if (app.get('env') === 'development'){
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+//Set static file
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/css', express.static(__dirname + 'public/css'))
+app.use('/js', express.static(__dirname + 'public/js'))
+app.use('/img', express.static(__dirname + 'public/img'))
 
 //Custom Middleware
 app.use('/api', indexRouter);
 app.use('/api/signup', signupRouter);
 app.use('/api/login', loginRouter);
 app.use('/api/blog', blogRouter);
+app.use('/api/about', aboutRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
