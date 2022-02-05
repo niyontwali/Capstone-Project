@@ -1,16 +1,18 @@
 //Required built-in Modules
 const createError = require('http-errors');
+require('./models/db');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 //Required custom modules
-const indexRouter = require('./src/routes/index');
-const signupRouter = require('./src/routes/signup');
-const loginRouter = require('./src/routes/login');
-const blogRouter = require('./src/routes/blog');
-const aboutRouter = require('./src/routes/about')
+const authRoutes = require('./routes/authRoutes')
+const indexRouter = require('./routes/index');
+const signupRouter = require('./routes/signup');
+const loginRouter = require('./routes/login');
+const blogRouter = require('./routes/blog');
+const aboutRouter = require('./routes/about')
 const { dirname } = require('path');
 
 //Initialization express app
@@ -38,11 +40,13 @@ app.use('/js', express.static(__dirname + 'public/js'))
 app.use('/img', express.static(__dirname + 'public/img'))
 
 //Custom Middleware
+app.use(authRoutes)
 app.use('/api', indexRouter);
 app.use('/api/signup', signupRouter);
 app.use('/api/login', loginRouter);
 app.use('/api/blog', blogRouter);
 app.use('/api/about', aboutRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

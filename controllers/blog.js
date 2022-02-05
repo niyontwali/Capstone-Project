@@ -1,4 +1,3 @@
-const users = require('../db/index');
 const blog = (req, res) => {
     res.status(200).json({
         message: 'Welcome to the Blog Page',

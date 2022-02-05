@@ -1,4 +1,3 @@
-const users = require('../db/index');
 const signup = (req, res) => {
         const user = req.body;
         const { password, email, firstName, lastName, confirm } = user;
@@ -6,7 +5,7 @@ const signup = (req, res) => {
             return res.status(400).json({
                 Error: 'Please enter all the fields i.e. first name, last name, email, password and confirm your password'
             }) 
-        }
+        } 
         if (password !== confirm){
             return res.status(400).json({
                 Error: 'Passwords must match'

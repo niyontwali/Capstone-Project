@@ -1,4 +1,3 @@
-const users = require('../db/index');
 const jwt = require('jsonwebtoken');
 const login = (req, res) => {
         const user = req.body;

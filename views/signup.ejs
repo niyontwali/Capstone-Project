@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="Sign_Up.css">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="/css/signup.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
     integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
@@ -15,57 +15,56 @@
       <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
       </label>
-      <label onclick="document.location='index.html'" class="logo">johnN</label>
+      <label onclick="document.location='index'" class="logo">johnN</label>
       <ul>
-        <li><a href="../Home/index.html">Home</a></li>
-        <li><a href="../About/about.html">About</a></li>
-        <li><a href="../blogPage/blog.html">My Blog</a></li>
-        <li><a href="../Contact Us/contact.html">Contact Us</a></li>
-        <li class="sign-style"><a href="../Login/login.html" class="sign-btn-style">Login</a></li>
+        <li><a href="index">Home</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="blog">My Blog</a></li>
+        <li><a href="contact">Contact Us</a></li>
+        <li class="sign-style"><a href="login" class="sign-btn-style">Login</a></li>
       </ul>
     </nav>
     <div class="form-container">
         <div class="container">
-            <div id="error" style="color: red; padding: 10px 0px;"></div>
             <form id="form" action="#">
                 <div class="title">Sign Up</div>
                    <div class="user-details">
                        <div class="input-box">
                            <span class="details">Full Name</span>
                            <input id="full-name" name="fullName" type="text" placeholder="Enter your Full Name">
-                           <small>Display Error Message</small>
+                           <div class="fullName err"></div>
                        </div>
                        <div class="input-box"> 
                             <span class="details">Username</span>
                             <input id="username" name="userName" type="text" placeholder="Enter your Username">
-                            <small>Display Error Message</small>
+                            <div class="userName err"></div>
                         </div>
                         <div class="input-box">
                             <span class="details">Email</span> 
                             <input id="email" name="email" placeholder="Enter your email">
-                            <small>Display Error Message</small>
+                            <div class="email err"></div>
                         </div>
                         <div class="input-box">
                             <span class="details">Tel Number</span> 
                             <input id="number" name="telNumber" type="text" placeholder="Enter your mobile number">
-                            <small>Display Error Message</small>
+                            <div class="telNumber err"></div>
                         </div>
                         <div class="input-box">
                             <span class="details">Password</span>
                             <input id="password" name="password" type="password" placeholder="Enter a Password">
-                            <small>Display Error Message</small>
+                            <div class="password err"></div>
                         </div>
                         <div class="input-box">
                             <span class="details">Confirm Password</span>
                             <input id="conf-password" name="confirmPassword" type="password" placeholder="Re-type your password">
-                            <small>Display Error Message</small>
+                            <div class="confirmPassword err"></div>
                         </div>
                    </div>
                    <div class="button">
                        <input id="but" type="submit" name="submit" value="Sign Up">
                        <!-- <button id="but">Sign Up</button> -->
                    </div>
-                   <p style="text-align: center;">or <a href="login.html"> Login</a> if you already have an account</p>
+                   <p class="dir_login">if you already have an account <a href="login"> Login here</a></p>
                     
             </form>
         </div>
@@ -92,10 +91,7 @@
                 </div>
             </div>
    </footer>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-<script src="app.js"></script>
+<!-- <script src="/js/signup.js"></script> -->
+<script src="/js/signup_page.js"></script>
 </body>
 </html>

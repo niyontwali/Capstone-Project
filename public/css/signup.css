@@ -146,7 +146,8 @@ li a:hover:not(.active){
 .container{
     max-width: 700px;
     width: 100%;
-    background-color: #fff;
+    background-color: rgb(237, 246, 247);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     padding: 25px 30px;
     border-radius: 5px;
 }
@@ -184,15 +185,11 @@ form .input-box span.details{
   border-bottom-width: 2px;
   
 }
-.user-details .input-box input:focus,
-.user-details .input-box input:valid{
-  border-color:;
-}
-.user-details small{
-  color: red;
+
+.user-details div.err{
+  color: rgb(168, 30, 30);
+  font-size: 14px;
   position: absolute;
-  padding-bottom: 10px;
-  visibility: hidden;
 }
 .user-details .input-box.success input{
   border: 2px solid #2bc2ec;
@@ -218,6 +215,18 @@ form .input-box span.details{
    cursor: pointer;
    transition: all 0.3s ease;
    background: linear-gradient(135deg, #71b7e6, #86ddc0);
+ }
+ .dir_login{
+  text-align: center;
+  font-weight: bold;
+ }
+
+ .dir_login a{
+   color: #71b7e6;
+ }
+ .dir_login a:hover{
+   color: #86ddc0;
+   font-size: 17px;
  }
  
  form .button input:hover{

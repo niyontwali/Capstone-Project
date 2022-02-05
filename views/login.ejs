@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="login.css">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
     integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
@@ -17,11 +17,11 @@
       </label>
       <label onclick="document.location='index.html'" class="logo">johnN</label>
       <ul>
-        <li><a href="../Home/index.html">Home</a></li>
-        <li><a href="../About/about.html">About</a></li>
-        <li><a href="../Blog/blog.html">My Blog</a></li>
-        <li><a href="../Contact Us/contact.html">Contact Us</a></li>
-        <li><a href="../Login/login.html" class="sign-btn-style" class="active">Login</a></li>
+        <li><a href="index">Home</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="blog">My Blog</a></li>
+        <li><a href="contact">Contact Us</a></li>
+        <li><a href="login" class="sign-btn-style" class="active">Login</a></li>
       </ul>
     </nav>
     <div id="container">
@@ -42,7 +42,7 @@
                     <div class="input-box button">
                         <input id="loginBut" type="submit" name="" value="Continue">
                     </div>
-                    <p style="text-align: center;">or <a href="Sign_Up.html"> Sign Up</a> if you don't have an Account</p>
+                    <p class="dir_signup">If you don't have an Account, <a href="signup"> Signup here</a></p>
                 </form>
             </div>
         </div>
@@ -68,11 +68,6 @@
                 </div>
             </div>
    </footer>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <script src="login.js"></script>
-    <script src="app2.js"></script>
+    <script src="/js/login.js"></script>
 </body>
 </html>

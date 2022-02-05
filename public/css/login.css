@@ -174,7 +174,7 @@ content: '';
 position: absolute;
 height: 2px;
 width: 100%;
-background: linear-gradient(to right, #99004d 0%, #ff0080 100%);
+background: linear-gradient(to right, #e77f92 0%, #e77f92 100%);
 left: 0;
 bottom: 0;
 transform: scaleX(0);
@@ -190,7 +190,7 @@ transform-origin: left;
 margin: 40px 0 20px 0;
 }
 .container .input-box input[type="submit"]{
-background: linear-gradient(to right, #e77f92 0%, #ff0080 100%);
+background: linear-gradient(to right, #e77f92 0%, #e77f92 100%);
 font-size: 17px;
 color: #fff;
 border-radius: 5px;
@@ -199,7 +199,7 @@ transition: all 0.3s ease;
 }
 .container .input-box input[type="submit"]:hover{
 letter-spacing: 1px;
-background: linear-gradient(to left, #e77f92 0%, #ff0080 100%);
+background: linear-gradient(to left, #ff0080 0%, #ff0080 100%);
 }
 .container .option{
 font-size: 14px;
@@ -224,6 +224,17 @@ transition: all 0.3s ease;
   padding-bottom: 10px;
   visibility: hidden;
 }
+.dir_signup{
+  text-align: center;
+  font-weight: bold;
+ }
+ .dir_signup a{
+   color: #e77f92;
+ }
+ .dir_signup a:hover{
+   color: #ff0080;
+   font-size: 16.5px;
+ }
 /* End of content */
 
 /* Start of Footer */
