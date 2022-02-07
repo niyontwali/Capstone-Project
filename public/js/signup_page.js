@@ -45,14 +45,22 @@ form.addEventListener('submit', async (e) => {
       passwordError.textContent = data.errs.password;
       confirmPasswordError.textContent = data.errs.confirmPassword;
     }
+  if(confirmPassword !== password){
+          console.log('The passwords must match');
+  }else{
+    console.log('The passwords match')
+  }
+
+    if (data.user){
+      alert('You have successfully signed up!')
+      form.reset()
+      
+    }
   } 
   catch (error) {
     console.log(error);
   }
 
-  if (!data.errs){
-     form.reset();
-  }
- 
 
-})
+
+});

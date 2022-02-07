@@ -33,9 +33,13 @@ const userSchema = new mongoose.Schema({
     confirmPassword: {
         type: String,
         required: [true, 'Please re-enter a password'],
-        minlength: [6, 'Please enter a minimum of 6 characters or more!']
+        minlength: [6, 'Please enter a minimum of 6 characters or more!'],
+        // validate: [(confirmPassword, password)=>{
+        //     if(confirmPassword.textContent !== password.textContent){
+        //        return false;
+        // }
+        // }, 'The passwords must match']
     }
-
 }); 
 
 //fire a function after doc saved to db
@@ -56,6 +60,19 @@ userSchema.pre('save', async function (next){
     this.confirmPassword = await bcrypt.hash(this.confirmPassword, salt)
     next()
 });
+
+//static method to login user
+userSchema.statics.login = async function(email, password){
+    const user = await this.findOne({email});
+    if (user){
+        const auth = await bcrypt.compare(password, user.password);
+        if (auth){
+            return user;
+        }
+        throw Error('incorrect password');
+    }
+    throw Error('incorrect email');
+}
 
 const User = mongoose.model('user', userSchema);
 
