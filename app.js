@@ -5,14 +5,10 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const {auth} = require('./middleware/authMiddleware')
 
 //Required custom modules
 const authRoutes = require('./routes/authRoutes')
-const indexRouter = require('./routes/index');
-const signupRouter = require('./routes/signup');
-const loginRouter = require('./routes/login');
-const blogRouter = require('./routes/blog');
-const aboutRouter = require('./routes/about')
 const { dirname } = require('path');
 
 //Initialization express app
@@ -41,12 +37,20 @@ app.use('/img', express.static(__dirname + 'public/img'))
 
 //Custom Middleware
 app.use(authRoutes)
-app.use('/api', indexRouter);
-app.use('/api/signup', signupRouter);
-app.use('/api/login', loginRouter);
-app.use('/api/blog', blogRouter);
-app.use('/api/about', aboutRouter);
 
+//Routes
+app.get('/', (req, res) => {
+  res.render('index')
+})
+app.get('/about', auth, (req, res) => {
+  res.render('about')
+})
+app.get('/blog', (req, res) => {
+  res.render('blog')
+})
+app.get('/contact', (req, res) => {
+  res.render('contact')
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
